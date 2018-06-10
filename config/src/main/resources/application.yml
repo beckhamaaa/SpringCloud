@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/beckhamaaa/config-repo.git
+          username: beckhamaaa@126.com
+          password:
+#          连接远程git
+#          basedir: aa
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+#       http://localhost:8080/dev/order-b.yml  访问github上的yml文件
+
+#      暴露bus-refresh接口
+management:
+  endpoints:
+    web:
+      expose: "*"
+#       "*"  全部暴露，yml文件必须有" "

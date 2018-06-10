@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: order
+#    config-client配置
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG
+      profile: dev
+#      消息分组
+    stream:
+      bindings:
+        myMessage:
+          group: order
+#          返回json字符串
+          content-type: application/json
+#      rabbitmq
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
