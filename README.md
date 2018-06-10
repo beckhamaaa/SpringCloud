@@ -1,2 +1,2 @@
-# config-repo
-config-server
+# spirng-cloud
+springcloud服务拆分
